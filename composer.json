@@ -1,0 +1,14 @@
+{
+    "name": "jinjie/silverstripe-codeeditorfield",
+    "description": "Code editor field for SilverStripe",
+    "type": "silverstripe-vendormodule",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kong Jin Jie",
+            "email": "jinjie@swiftdev.sg"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
