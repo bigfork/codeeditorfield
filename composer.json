@@ -1,5 +1,5 @@
 {
-    "name": "jinjie/silverstripe-codeeditorfield",
+    "name": "jinjie/codeeditorfield",
     "description": "Code editor field for SilverStripe",
     "type": "silverstripe-vendormodule",
     "license": "MIT",
@@ -9,6 +9,12 @@
             "email": "jinjie@swiftdev.sg"
         }
     ],
+    "extra": {
+        "expose": [
+            "resources/thirdparty/ace",
+            "resources/javascript"
+        ]
+    },
     "minimum-stability": "dev",
     "require": {}
 }

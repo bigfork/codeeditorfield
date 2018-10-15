@@ -1,0 +1,68 @@
+<?php
+
+namespace SwiftDevLabs\CodeEditorField\Forms;
+
+use SilverStripe\Forms\TextareaField;
+use SilverStripe\View\Requirements;
+
+class CodeEditorField extends TextareaField
+{
+    private $height = 300;
+    private $mode = 'ace/mode/text';
+
+    public function Field($properties = [])
+    {
+        Requirements::javascript('jinjie/codeeditorfield:resources/thirdparty/ace/ace.js');
+        Requirements::javascriptTemplate('jinjie/codeeditorfield:resources/javascript/CodeEditorField.js', [
+            'Mode'  => $this->getMode()
+        ]);
+
+        $this->addExtraClass('codeeditorfield');
+
+        return parent::Field($properties);
+    }
+
+    /**
+     * Set height of editor in pixels
+     */
+    public function setHeight(int $height)
+    {
+        return $this->height;
+    }
+
+    /**
+     * Height of field
+     * @return int Height
+     */
+    public function getHeight()
+    {
+        return $this->height;
+    }
+
+    public function getInputType()
+    {
+        return 'text';
+    }
+
+    /**
+     * Get editing mode of the editor. Modes can be found at
+     * https://github.com/ajaxorg/ace/tree/master/lib/ace/mode
+     * @return string Ace editor mode
+     */
+    public function getMode()
+    {
+        return $this->mode;
+    }
+
+    /**
+     * Set the modes. Get list of modes at
+     * https://github.com/ajaxorg/ace/tree/master/lib/ace/mode
+     * @param CodeEditorField $mode Editing mode
+     */
+    public function setMode($mode)
+    {
+        $this->mode = $mode;
+
+        return $this;
+    }
+}
