@@ -24,10 +24,13 @@ class CodeEditorField extends TextareaField
 
     /**
      * Set height of editor in pixels
+     * @param int $height Height of editor
      */
     public function setHeight(int $height)
     {
-        return $this->height;
+        $this->height = $height;
+
+        return $this;
     }
 
     /**

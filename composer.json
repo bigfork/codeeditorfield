@@ -16,5 +16,8 @@
         ]
     },
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "silverstripe/framework": "^4",
+        "php": ">=7.1"
+    }
 }
