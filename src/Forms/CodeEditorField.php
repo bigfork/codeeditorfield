@@ -60,7 +60,7 @@ class CodeEditorField extends TextareaField
     /**
      * Set the modes. Get list of modes at
      * https://github.com/ajaxorg/ace/tree/master/lib/ace/mode
-     * @param CodeEditorField $mode Editing mode
+     * @param string $mode Editing mode
      */
     public function setMode($mode)
     {
