@@ -13,9 +13,7 @@ class CodeEditorField extends TextareaField
     public function Field($properties = [])
     {
         Requirements::javascript('jinjie/codeeditorfield:resources/thirdparty/ace/ace.js');
-        Requirements::javascriptTemplate('jinjie/codeeditorfield:resources/javascript/CodeEditorField.js', [
-            'Mode'  => $this->getMode()
-        ]);
+        Requirements::javascript('jinjie/codeeditorfield:resources/javascript/CodeEditorField.js');
 
         $this->addExtraClass('codeeditorfield');
 
